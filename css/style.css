@@ -17,6 +17,10 @@
 
   --nav-h: 72px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Padding horizontal que se auto-expande en pantallas grandes
+     para que el contenido nunca supere ~1440px de ancho */
+  --section-px: max(clamp(24px, 5vw, 80px), calc((100vw - 1440px) / 2));
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -191,7 +195,7 @@ textarea, input, select { font: inherit; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 clamp(24px, 5vw, 80px) clamp(60px, 8vh, 100px);
+  padding: 0 var(--section-px) clamp(60px, 8vh, 100px);
   overflow: hidden;
 }
 
@@ -513,7 +517,7 @@ textarea, input, select { font: inherit; }
 ════════════════════════════════════════════════════════════ */
 .manifiesto {
   background: var(--fucsia);
-  padding: clamp(80px, 14vh, 140px) clamp(24px, 10vw, 120px);
+  padding: clamp(80px, 14vh, 140px) var(--section-px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -546,7 +550,7 @@ textarea, input, select { font: inherit; }
 ════════════════════════════════════════════════════════════ */
 .video-section {
   background: var(--marino);
-  padding: clamp(80px, 14vh, 140px) clamp(24px, 8vw, 100px);
+  padding: clamp(80px, 14vh, 140px) var(--section-px);
   overflow: hidden;
 }
 .video-section__inner {
@@ -685,7 +689,7 @@ textarea, input, select { font: inherit; }
 ════════════════════════════════════════════════════════════ */
 .testimoniales {
   background: var(--crema);
-  padding: clamp(80px, 14vh, 140px) clamp(24px, 8vw, 100px);
+  padding: clamp(80px, 14vh, 140px) var(--section-px);
   text-align: center;
 }
 .testimoniales__eyebrow {
@@ -815,7 +819,7 @@ textarea, input, select { font: inherit; }
    PROCESO (línea de tiempo)
 ════════════════════════════════════════════════════════════ */
 .proceso {
-  padding: clamp(80px, 14vh, 140px) clamp(24px, 8vw, 100px);
+  padding: clamp(80px, 14vh, 140px) var(--section-px);
   background: var(--crema);
 }
 .proceso__titulo {
@@ -885,7 +889,7 @@ textarea, input, select { font: inherit; }
 .contacto {
   position: relative;
   background: var(--marino);
-  padding: clamp(80px, 14vh, 140px) clamp(24px, 8vw, 100px);
+  padding: clamp(80px, 14vh, 140px) var(--section-px);
   overflow: hidden;
 }
 
@@ -1025,7 +1029,7 @@ textarea, input, select { font: inherit; }
 ════════════════════════════════════════════════════════════ */
 .cta-final {
   background: var(--crema);
-  padding: clamp(100px, 18vh, 180px) clamp(24px, 8vw, 100px);
+  padding: clamp(100px, 18vh, 180px) var(--section-px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1047,7 +1051,7 @@ textarea, input, select { font: inherit; }
 ════════════════════════════════════════════════════════════ */
 .footer {
   background: var(--marino);
-  padding: 36px clamp(24px, 8vw, 100px);
+  padding: 36px var(--section-px);
   border-top: 1px solid rgba(247, 241, 232, 0.06);
 }
 .footer__inner {
@@ -1108,7 +1112,7 @@ textarea, input, select { font: inherit; }
 ════════════════════════════════════════════════════════════ */
 .stats-bar {
   background: var(--marino-2);
-  padding: clamp(60px, 10vh, 100px) clamp(24px, 8vw, 100px);
+  padding: clamp(60px, 10vh, 100px) var(--section-px);
 }
 .stats-bar__inner {
   display: flex;

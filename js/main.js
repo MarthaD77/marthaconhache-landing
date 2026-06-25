@@ -121,6 +121,8 @@ function initGSAP() {
     const stats     = document.querySelector('.hero__stats');
     const scrollInd = document.querySelector('.hero__scroll');
 
+    gsap.set(lines, { opacity: 0, y: 80 });
+
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     // Cada línea: y:80→0 con opacity:0→1, stagger de 0.2s
@@ -170,8 +172,8 @@ function initGSAP() {
     marqueeScrolls.forEach(marquee => {
       const inner    = marquee.querySelector('.marquee-inner');
       const reversed = marquee.dataset.reversed === 'true';
-      const xStart   = reversed ? '-10%' : '0%';
-      const xEnd     = reversed ? '0%'   : '-10%';
+      const xStart   = reversed ? '-30%' : '0%';
+      const xEnd     = reversed ? '0%'   : '-30%';
 
       gsap.fromTo(inner,
         { x: xStart },
@@ -337,23 +339,21 @@ function initGSAP() {
     nums.forEach(el => {
       const target = parseInt(el.dataset.target, 10);
       const suffix = el.dataset.suffix || '';
+      const obj = { val: 0 };
 
-      gsap.fromTo(
-        { val: 0 },
-        { val: target },
-        {
-          duration: 1.6,
-          ease:     'power2.out',
-          onUpdate: function() {
-            el.textContent = Math.round(this.targets()[0].val) + suffix;
-          },
-          scrollTrigger: {
-            trigger:       el,
-            start:         'top 80%',
-            toggleActions: 'play none none none'
-          }
+      gsap.to(obj, {
+        val: target,
+        duration: 1.6,
+        ease: 'power2.out',
+        onUpdate: () => {
+          el.textContent = Math.round(obj.val) + suffix;
+        },
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%',
+          toggleActions: 'play none none none'
         }
-      );
+      });
     });
   })();
 

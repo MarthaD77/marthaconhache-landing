@@ -1,0 +1,29 @@
+# Claude Code
+.claude/
+
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Sistema Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS (por si se edita desde Mac)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editores
+*.suo
+*.user
+.vscode/
+*.swp
+*.swo

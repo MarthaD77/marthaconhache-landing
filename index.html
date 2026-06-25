@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martha Conache | Presencia digital para mujeres con experticia real</title>
+  <meta name="description" content="Construyo la presencia digital de mujeres que saben mucho y aparecen poco — con estrategia, web y la IA trabajando para ti. Diagnóstico gratuito en 48-72h." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://marthaconhache.es/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Martha Conache · Presencia digital con criterio" />
+  <meta property="og:description" content="Tu trabajo es extraordinario. Que se vea, que te encuentren, que te elijan." />
+  <meta property="og:url" content="https://marthaconhache.es/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRELOADER
+════════════════════════════════════════════════════════════ -->
+<div id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__logo">
+      <!-- Logo versión oscura (sobre marino) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" height="70" style="display:block">
+        <path d="M160 122 L130 70 Q126 62 134 62 L186 62 Q194 62 190 70 Z" fill="#F41354"/>
+        <circle cx="118" cy="124" r="5.5" fill="#F41354"/>
+        <circle cx="202" cy="124" r="5.5" fill="#F41354"/>
+        <text x="160" y="208" font-family="Fraunces,Georgia,serif" font-size="70" font-weight="400" fill="#F7F1E8" text-anchor="middle" letter-spacing="-1.5">Martha</text>
+        <text x="160" y="241" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="500" fill="#F7F1E8" text-anchor="middle" letter-spacing="4">CON<tspan fill="#F41354">·</tspan>HACHE</text>
+        <text x="160" y="274" font-family="DM Sans,Arial,sans-serif" font-size="10" font-weight="500" fill="#F41354" text-anchor="middle" letter-spacing="13">DIGITAL</text>
+      </svg>
+    </div>
+    <div class="preloader__counter" aria-hidden="true">
+      <span id="preloader-num">0</span>
+    </div>
+    <div class="preloader__scroll-hint" id="preloader-scroll-hint" aria-hidden="true">
+      <span class="preloader__scroll-line"></span>
+      <span class="preloader__scroll-text">SCROLL</span>
+      <span class="preloader__scroll-line"></span>
+    </div>
+  </div>
+</div>
+
+<div id="smooth-wrapper">
+<div id="smooth-content">
+
+<!-- ───────────────────────────────────────────────────────────
+     NAV
+─────────────────────────────────────────────────────────── -->
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <a href="/" class="nav__logo" aria-label="Martha Conache — inicio">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" height="44" style="display:block">
+      <path d="M160 122 L130 70 Q126 62 134 62 L186 62 Q194 62 190 70 Z" fill="#F41354"/>
+      <circle cx="118" cy="124" r="5.5" fill="#F41354"/>
+      <circle cx="202" cy="124" r="5.5" fill="#F41354"/>
+      <text x="160" y="208" font-family="Fraunces,Georgia,serif" font-size="70" font-weight="400" fill="#F7F1E8" text-anchor="middle" letter-spacing="-1.5">Martha</text>
+      <text x="160" y="241" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="500" fill="#F7F1E8" text-anchor="middle" letter-spacing="4">CON<tspan fill="#F41354">·</tspan>HACHE</text>
+      <text x="160" y="274" font-family="DM Sans,Arial,sans-serif" font-size="10" font-weight="500" fill="#F41354" text-anchor="middle" letter-spacing="13">DIGITAL</text>
+    </svg>
+  </a>
+  <a href="#contacto" class="nav__cta btn btn--fucsia">Quiero mi diagnóstico</a>
+</nav>
+
+<!-- ───────────────────────────────────────────────────────────
+     HERO — pantalla completa
+─────────────────────────────────────────────────────────── -->
+<section id="hero" aria-label="Hero">
+  <!-- Imagen de fondo con overlay -->
+  <div class="hero__bg">
+    <img src="assets/mujeres-sonriendo-marthaconhache-1900.png" alt="Mujeres emprendedoras sonriendo" class="hero__img" loading="eager" />
+    <div class="hero__overlay"></div>
+  </div>
+
+  <!-- Supertítulo tenue -->
+  <p class="hero__supertitle" aria-hidden="true">PRESENCIA DIGITAL PARA POSICIONAR TU NEGOCIO</p>
+
+  <!-- Contenido principal -->
+  <div class="hero__content">
+    <!-- H1 con efecto esqueleto→relleno -->
+    <div class="hero__left">
+      <h1 class="hero__h1" id="hero-h1">
+        <span class="hero__line" data-text="Tu trabajo es">Tu trabajo es</span>
+        <span class="hero__line hero__line--accent" data-text="extraordinario.">extraordinario.</span>
+        <span class="hero__line" data-text="Que se vea,">Que se vea,</span>
+        <span class="hero__line hero__line--muted" data-text="que te elijan.">que te elijan.</span>
+      </h1>
+      <p class="hero__sub">Construyo la presencia digital de mujeres que saben mucho y aparecen poco — con estrategia, web y la IA trabajando para ti.</p>
+    </div>
+
+    <!-- Caja de stats -->
+    <aside class="hero__stats" aria-label="Datos del servicio">
+      <div class="hero__stat">
+        <span class="hero__stat-num">Te contacto</span>
+        <span class="hero__stat-label">lo antes posible</span>
+      </div>
+      <div class="hero__stat-divider" aria-hidden="true"></div>
+      <div class="hero__stat">
+        <span class="hero__stat-num">Atención</span>
+        <span class="hero__stat-label">100% personalizada</span>
+      </div>
+      <a href="#contacto" class="btn btn--fucsia hero__stat-cta">Quiero mi diagnóstico →</a>
+    </aside>
+  </div>
+
+  <!-- Indicador scroll -->
+  <div class="scroll-indicator hero__scroll" aria-hidden="true">
+    <span class="scroll-indicator__line"></span>
+    <span class="scroll-indicator__text">SCROLL</span>
+    <span class="scroll-indicator__line"></span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     TEXTO DOBLE EN SCROLL (marquee en sentidos contrarios)
+─────────────────────────────────────────────────────────── -->
+<section class="texto-doble" aria-hidden="true">
+  <div class="marquee-scroll" data-reversed="false">
+    <div class="marquee-inner">
+      <span>Tu trabajo es <em>extraordinario.</em></span>
+      <span aria-hidden="true">Tu trabajo es <em>extraordinario.</em></span>
+    </div>
+  </div>
+  <div class="marquee-scroll" data-reversed="true">
+    <div class="marquee-inner">
+      <span>Tu trabajo es <em>extraordinario.</em></span>
+      <span aria-hidden="true">Tu trabajo es <em>extraordinario.</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     FRASES EN SCROLL — bloques verticales con reveal de opacidad
+─────────────────────────────────────────────────────────── -->
+<section id="frases-scroll" class="frases-scroll" aria-label="Frases de método">
+  <div class="frase-bloque">
+    <p class="frase-bloque__texto">Primero entender,<br>después <span class="frase-accent">construir.</span></p>
+  </div>
+  <div class="frase-bloque">
+    <p class="frase-bloque__texto">Así todo<br>tiene sentido.</p>
+  </div>
+  <div class="frase-bloque">
+    <p class="frase-bloque__texto">El esfuerzo está.<br>Lo que falta es <span class="frase-accent">orden.</span></p>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     ZOOM CINEMATOGRÁFICO — 3 encuadres sticky
+─────────────────────────────────────────────────────────── -->
+<div class="zoom-section" aria-label="Proceso de trabajo">
+  <div class="zoom-spacer" id="zoomSpacer">
+    <div class="zoom-sticky">
+      <img
+        id="zoomImg"
+        src="assets/mujeres-laptop-marthaconhache-1900x1267.png"
+        alt="Mujeres trabajando con portátil"
+      >
+      <div class="zoom-overlay" id="zoomOverlay"></div>
+      <div class="zoom-copy" id="zoomCopy">
+        <p class="zoom-copy-label">El resultado</p>
+        <h2 class="zoom-copy-title">Tu presencia digital,<br>reflejo de tu valor real.</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────────────────────────────────────────────────────
+     PILARES — panel lateral fijo + texto reveal
+─────────────────────────────────────────────────────────── -->
+<section id="pilares" class="pilares" aria-label="Los 3 pilares del método">
+  <!-- Panel lateral -->
+  <div class="pilares__sidebar" id="pilares-sidebar">
+    <div class="pilares__sidebar-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" height="50" style="display:block">
+        <path d="M160 122 L130 70 Q126 62 134 62 L186 62 Q194 62 190 70 Z" fill="#F41354"/>
+        <circle cx="118" cy="124" r="5.5" fill="#F41354"/>
+        <circle cx="202" cy="124" r="5.5" fill="#F41354"/>
+        <text x="160" y="208" font-family="Fraunces,Georgia,serif" font-size="70" font-weight="400" fill="#F7F1E8" text-anchor="middle" letter-spacing="-1.5">Martha</text>
+        <text x="160" y="241" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="500" fill="#F7F1E8" text-anchor="middle" letter-spacing="4">CON<tspan fill="#F41354">·</tspan>HACHE</text>
+        <text x="160" y="274" font-family="DM Sans,Arial,sans-serif" font-size="10" font-weight="500" fill="#F41354" text-anchor="middle" letter-spacing="13">DIGITAL</text>
+      </svg>
+    </div>
+    <ol class="pilares__list" aria-label="Pilares del método">
+      <li class="pilares__item" data-pilar="1">
+        <span class="pilares__num">01</span>
+        <span class="pilares__label">El diagnóstico va primero</span>
+      </li>
+      <li class="pilares__item" data-pilar="2">
+        <span class="pilares__num">02</span>
+        <span class="pilares__label">Estructura, no piezas sueltas</span>
+      </li>
+      <li class="pilares__item" data-pilar="3">
+        <span class="pilares__num">03</span>
+        <span class="pilares__label">Herramientas tuyas para siempre</span>
+      </li>
+    </ol>
+    <p class="pilares__sidebar-rotated" aria-hidden="true">MARTHA CON·HACHE · 2026</p>
+  </div>
+
+  <!-- Contenido derecho con reveal al scroll -->
+  <div class="pilares__content">
+    <div class="pilar-bloque" data-pilar="1">
+      <p class="pilar-bloque__num" aria-hidden="true">01</p>
+      <h2 class="pilar-bloque__titulo">El diagnóstico va primero.</h2>
+      <p class="pilar-bloque__texto">Antes de proponer, entiendo tu negocio, tu clienta y tu momento. Lo que construyo tiene sentido porque parte de una base real — no de una plantilla que podría ser de cualquiera.</p>
+    </div>
+    <div class="pilar-bloque" data-pilar="2">
+      <p class="pilar-bloque__num" aria-hidden="true">02</p>
+      <h2 class="pilar-bloque__titulo">Estructura, no piezas sueltas.</h2>
+      <p class="pilar-bloque__texto">Web, mensaje, captación y marca conectadas en un sistema que se sostiene. Cada decisión tiene en cuenta el todo — para que cuando crezcas, no tengas que rehacerlo.</p>
+    </div>
+    <div class="pilar-bloque" data-pilar="3">
+      <p class="pilar-bloque__num" aria-hidden="true">03</p>
+      <h2 class="pilar-bloque__titulo">Herramientas tuyas para siempre.</h2>
+      <p class="pilar-bloque__texto">La IA trabajando para tu negocio. No creo dependencia, creo capacidad. Al terminar, sabes usar lo que tienes — y recuperas horas cada semana.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     MANIFIESTO
+─────────────────────────────────────────────────────────── -->
+<section id="manifiesto" class="manifiesto" aria-label="Manifiesto de Martha">
+  <blockquote class="manifiesto__quote">
+    <p>Refleja eso tan importante<br>que haces.</p>
+    <footer class="manifiesto__firma">— Martha</footer>
+  </blockquote>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     SECCIÓN DE VÍDEO
+─────────────────────────────────────────────────────────── -->
+<section id="video" class="video-section" aria-label="Vídeo de presentación">
+  <div class="video-section__inner">
+
+    <!-- Texto izquierda -->
+    <div class="video-section__copy">
+      <h2 class="video-section__titulo">
+        <span class="video-section__linea1">El problema no es<br>tu marketing.</span>
+        <span class="video-section__linea2">Es que tu experticia<br>no se ve.</span>
+      </h2>
+    </div>
+
+    <!-- Bloque de vídeo derecha -->
+    <div class="video-section__bloque">
+      <div class="video-section__thumb" id="video-thumb">
+        <button class="video-section__play" id="video-play-btn" aria-label="Reproducir vídeo">
+          <span aria-hidden="true">&#9654;</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal / lightbox de vídeo -->
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Reproductor de vídeo" hidden>
+    <div class="video-modal__backdrop" id="video-modal-backdrop"></div>
+    <div class="video-modal__inner">
+      <button class="video-modal__cerrar" id="video-modal-cerrar" aria-label="Cerrar vídeo">✕</button>
+      <div class="video-modal__iframe-wrap">
+        <!-- Sustituir VIDEO_URL_AQUI por la URL real del vídeo (YouTube embed, Vimeo, etc.) -->
+        <iframe
+          id="video-iframe"
+          src=""
+          data-src="VIDEO_URL_AQUI"
+          title="Vídeo de presentación Martha Con·Hache"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     TESTIMONIALES
+─────────────────────────────────────────────────────────── -->
+<section id="testimoniales" class="testimoniales" aria-label="Testimonios de clientes">
+  <p class="testimoniales__eyebrow">LO QUE DICEN</p>
+
+  <div class="testimoniales__carrusel" role="region" aria-label="Carrusel de testimonios">
+    <!-- Flecha anterior -->
+    <button class="testimoniales__flecha testimoniales__flecha--prev" aria-label="Testimonio anterior">&#8592;</button>
+
+    <!-- Contenedor de slides -->
+    <div class="testimoniales__slides" id="testimoniales-slides">
+
+      <!-- Testimonio 1 -->
+      <div class="testimonial" data-index="0" aria-hidden="false">
+        <!-- Sustituir por foto real de Ana García cuando esté disponible -->
+        <div class="testimonial__avatar" aria-hidden="true">
+          <span>A</span>
+        </div>
+        <blockquote class="testimonial__cita">
+          «Sabía que necesitaba mejorar mi presencia, pero no sabía por dónde empezar. Martha me dio claridad desde el primer diagnóstico.»
+        </blockquote>
+        <p class="testimonial__nombre">Ana García</p>
+        <p class="testimonial__cargo">Consultora de RRHH</p>
+      </div>
+
+      <!-- Testimonio 2 -->
+      <div class="testimonial" data-index="1" aria-hidden="true">
+        <!-- Sustituir por foto real de Laura Martínez cuando esté disponible -->
+        <div class="testimonial__avatar" aria-hidden="true">
+          <span>L</span>
+        </div>
+        <blockquote class="testimonial__cita">
+          «Por fin una web que me representa de verdad. No es una plantilla — es mi negocio, mi voz, mi esencia.»
+        </blockquote>
+        <p class="testimonial__nombre">Laura Martínez</p>
+        <p class="testimonial__cargo">Coach Ejecutiva</p>
+      </div>
+
+      <!-- Testimonio 3 -->
+      <div class="testimonial" data-index="2" aria-hidden="true">
+        <!-- Sustituir por foto real de Carmen López cuando esté disponible -->
+        <div class="testimonial__avatar" aria-hidden="true">
+          <span>C</span>
+        </div>
+        <blockquote class="testimonial__cita">
+          «La IA que integró en mi flujo de trabajo me devuelve horas cada semana. Eso no tiene precio.»
+        </blockquote>
+        <p class="testimonial__nombre">Carmen López</p>
+        <p class="testimonial__cargo">Abogada independiente</p>
+      </div>
+
+    </div><!-- /slides -->
+
+    <!-- Flecha siguiente -->
+    <button class="testimoniales__flecha testimoniales__flecha--next" aria-label="Testimonio siguiente">&#8594;</button>
+  </div>
+
+  <!-- Indicadores de posición -->
+  <div class="testimoniales__dots" aria-hidden="true">
+    <span class="testimoniales__dot testimoniales__dot--activo"></span>
+    <span class="testimoniales__dot"></span>
+    <span class="testimoniales__dot"></span>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     LÍNEA DE TIEMPO HORIZONTAL
+─────────────────────────────────────────────────────────── -->
+<section id="proceso" class="proceso" aria-label="Proceso de trabajo">
+  <h2 class="proceso__titulo section-title">Así avanzamos juntas.</h2>
+  <div class="proceso__timeline" role="list">
+    <div class="proceso__hito" role="listitem">
+      <div class="proceso__punto" aria-label="Paso 1: Diagnóstico"></div>
+      <p class="proceso__nombre">Diagnóstico</p>
+      <p class="proceso__desc">Entiendo tu negocio y lo que necesita</p>
+    </div>
+    <div class="proceso__linea" aria-hidden="true"></div>
+    <div class="proceso__hito" role="listitem">
+      <div class="proceso__punto" aria-label="Paso 2: Propuesta"></div>
+      <p class="proceso__nombre">Propuesta</p>
+      <p class="proceso__desc">Recibe un plan concreto, no una lista de servicios</p>
+    </div>
+    <div class="proceso__linea" aria-hidden="true"></div>
+    <div class="proceso__hito proceso__hito--activo" role="listitem">
+      <div class="proceso__punto proceso__punto--activo" aria-label="Paso 3: Construcción (actual)"></div>
+      <p class="proceso__nombre">Construcción</p>
+      <p class="proceso__desc">Ejecutamos con dedicación, sin plantillas</p>
+    </div>
+    <div class="proceso__linea" aria-hidden="true"></div>
+    <div class="proceso__hito" role="listitem">
+      <div class="proceso__punto" aria-label="Paso 4: Acompañamiento"></div>
+      <p class="proceso__nombre">Acompañamiento</p>
+      <p class="proceso__desc">Continuo — a tu ritmo, siempre cerca</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     CONTADORES / STATS
+─────────────────────────────────────────────────────────── -->
+<section id="stats" class="stats-bar" aria-label="Datos del método">
+  <div class="stats-bar__inner">
+    <div class="stats-bar__item">
+      <span class="stats-bar__num" data-target="48" data-suffix="h">0h</span>
+      <span class="stats-bar__label">máximo para responderte</span>
+    </div>
+    <div class="stats-bar__divider" aria-hidden="true"></div>
+    <div class="stats-bar__item">
+      <span class="stats-bar__num" data-target="100" data-suffix="%">0%</span>
+      <span class="stats-bar__label">a medida, sin plantillas</span>
+    </div>
+    <div class="stats-bar__divider" aria-hidden="true"></div>
+    <div class="stats-bar__item">
+      <span class="stats-bar__num" data-target="3" data-suffix=" pilares">0 pilares</span>
+      <span class="stats-bar__label">de método probado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     FORMULARIO CON GLOBO WIREFRAME
+─────────────────────────────────────────────────────────── -->
+<section id="contacto" class="contacto" aria-label="Formulario de contacto">
+  <!-- Esfera wireframe de fondo -->
+  <div class="contacto__esfera" aria-hidden="true">
+    <svg class="esfera-svg" id="esfera-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <!-- Círculo base -->
+      <circle cx="250" cy="250" r="220" fill="none" stroke="#F41354" stroke-width="0.8" opacity="0.18"/>
+      <!-- Meridianos verticales -->
+      <ellipse cx="250" cy="250" rx="60"  ry="220" fill="none" stroke="#F41354" stroke-width="0.6" opacity="0.15"/>
+      <ellipse cx="250" cy="250" rx="120" ry="220" fill="none" stroke="#F41354" stroke-width="0.6" opacity="0.15"/>
+      <ellipse cx="250" cy="250" rx="180" ry="220" fill="none" stroke="#F41354" stroke-width="0.6" opacity="0.15"/>
+      <!-- Paralelos horizontales -->
+      <ellipse cx="250" cy="130" rx="175" ry="35"  fill="none" stroke="#F41354" stroke-width="0.6" opacity="0.15"/>
+      <ellipse cx="250" cy="190" rx="210" ry="25"  fill="none" stroke="#F41354" stroke-width="0.6" opacity="0.15"/>
+      <ellipse cx="250" cy="250" rx="220" ry="18"  fill="none" stroke="#F41354" stroke-width="0.8" opacity="0.18"/>
+      <ellipse cx="250" cy="310" rx="210" ry="25"  fill="none" stroke="#F41354" stroke-width="0.6" opacity="0.15"/>
+      <ellipse cx="250" cy="370" rx="175" ry="35"  fill="none" stroke="#F41354" stroke-width="0.6" opacity="0.15"/>
+    </svg>
+  </div>
+
+  <div class="contacto__inner">
+    <!-- Texto izquierda -->
+    <div class="contacto__copy">
+      <h2 class="contacto__titulo section-title">Tu próximo proyecto<br>empieza aquí.</h2>
+      <p class="contacto__sub">Cuéntame sobre tu negocio. En 48-72 horas recibes tu diagnóstico — con propuesta concreta.</p>
+      <p class="contacto__guarantee">Sin compromiso. Sin presión. Sin humo.</p>
+    </div>
+
+    <!-- Formulario -->
+    <form class="contacto__form" id="contacto-form" name="contacto" data-netlify="true" novalidate>
+      <input type="hidden" name="form-name" value="contacto" />
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required autocomplete="given-name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+      </div>
+      <div class="form-group">
+        <label for="whatsapp">WhatsApp <span class="form-optional">(opcional)</span></label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+34 600 000 000" autocomplete="tel" />
+      </div>
+      <div class="form-group">
+        <label for="servicio">¿Qué necesitas?</label>
+        <select id="servicio" name="servicio" required>
+          <option value="" disabled selected>Elige una opción</option>
+          <option value="diagnostico">Diagnóstico digital (gratuito)</option>
+          <option value="landing">Landing estratégica</option>
+          <option value="web">Web profesional completa</option>
+          <option value="ia">Kit de Prompts con IA</option>
+          <option value="programa">Programa completo (3 meses)</option>
+          <option value="otro">Otro / No sé aún</option>
+        </select>
+      </div>
+      <div class="form-group form-group--full">
+        <label for="mensaje">Cuéntame</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu negocio y en qué punto estás ahora." required></textarea>
+      </div>
+      <button type="submit" class="btn btn--fucsia btn--large">Enviar mensaje →</button>
+      <p class="form-disclaimer">Respuesta en 48-72h · Sin compromiso · Tus datos solo se usan para responderte</p>
+
+      <!-- Mensaje de confirmación (oculto hasta envío) -->
+      <div class="form-success" id="form-success" aria-live="polite" hidden>
+        <div class="form-success__inner">
+          <span class="form-success__icon" aria-hidden="true">✓</span>
+          <p class="form-success__text">Mensaje recibido. En 48-72 horas tienes tu diagnóstico en el correo.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     CTA FINAL
+─────────────────────────────────────────────────────────── -->
+<section id="cta-final" class="cta-final" aria-label="Llamada a la acción final">
+  <div class="cta-final__logo">
+    <!-- Logo versión clara (sobre crema) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" height="80" style="display:block">
+      <path d="M160 122 L130 70 Q126 62 134 62 L186 62 Q194 62 190 70 Z" fill="#F41354"/>
+      <circle cx="118" cy="124" r="5.5" fill="#F41354"/>
+      <circle cx="202" cy="124" r="5.5" fill="#F41354"/>
+      <text x="160" y="208" font-family="Fraunces,Georgia,serif" font-size="70" font-weight="400" fill="#161B2E" text-anchor="middle" letter-spacing="-1.5">Martha</text>
+      <text x="160" y="241" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="500" fill="#161B2E" text-anchor="middle" letter-spacing="4">CON<tspan fill="#F41354">·</tspan>HACHE</text>
+      <text x="160" y="274" font-family="DM Sans,Arial,sans-serif" font-size="10" font-weight="500" fill="#F41354" text-anchor="middle" letter-spacing="13">DIGITAL</text>
+    </svg>
+  </div>
+  <p class="cta-final__tagline">Refleja eso tan importante que haces.</p>
+  <a href="#contacto" class="btn btn--fucsia btn--large">Quiero mi diagnóstico →</a>
+</section>
+
+<!-- ───────────────────────────────────────────────────────────
+     FOOTER
+─────────────────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <p class="footer__copy">© 2026 marthaconhache.es · Martha Con<span class="footer__punto">·</span>Hache · <a href="mailto:hola@marthaconhache.com">hola@marthaconhache.com</a></p>
+    <p class="footer__legal">
+      <a href="#aviso-legal">Aviso legal</a> ·
+      <a href="#privacidad">Política de privacidad</a> ·
+      <a href="#cookies">Política de cookies</a>
+    </p>
+  </div>
+</footer>
+
+</div><!-- /smooth-content -->
+</div><!-- /smooth-wrapper -->
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

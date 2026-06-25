@@ -175,7 +175,7 @@ textarea, input, select { font: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 clamp(24px, 5vw, 64px);
+  padding: 0 var(--section-px);
   height: var(--nav-h);
   background: transparent;
   transition: background 0.35s, backdrop-filter 0.35s;

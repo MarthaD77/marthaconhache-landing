@@ -21,7 +21,10 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
 /* Sin ScrollSmoother (plugin de pago), el smooth scroll lo maneja el navegador */
 
 body {
@@ -29,7 +32,12 @@ body {
   background: var(--crema);
   color: var(--tinta);
   overflow-x: hidden;
-  /* ocultar scroll nativo — ScrollSmoother lo maneja */
+  width: 100%;
+}
+
+#smooth-wrapper,
+#smooth-content {
+  width: 100%;
 }
 
 img { display: block; max-width: 100%; }
